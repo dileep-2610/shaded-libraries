@@ -13,8 +13,6 @@
 
     <name>tstudio-shaded-libraries</name>
 
-    <!-- No Java sources. Only relocates OTel + OkHttp -->
-
     <dependencies>
         <dependency>
             <groupId>io.opentelemetry</groupId>
@@ -78,6 +76,14 @@
 
     </dependencies>
 
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
     <build>
         <plugins>
             <plugin>
@@ -92,7 +98,6 @@
                         </goals>
                         <configuration>
 
-							<!-- Only shade what we explicitly depend on -->
                             <artifactSet>
                                 <includes>
                                     <include>io.opentelemetry:*</include>
